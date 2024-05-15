@@ -22,9 +22,9 @@ const VideoComponent = ({ videoRef }) => {
   };
 
   return (
-    <div>
+    <div className="video">
       {error ? (
-        <div>{error}</div>
+        <div className="error">{error}</div>
       ) : (
         <video crossOrigin="anonymous" ref={videoRef} autoPlay />
       )}

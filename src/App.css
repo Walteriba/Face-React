@@ -1,18 +1,66 @@
-.appvideo{
-  display: flex;
-  align-items: center;
+.tittle{
+  text-align: center;
+  font-size: 3rem;
 }
 
-.appcanvas{
+.myapp {
+  display: flex;
+  position: relative; 
+}
+
+.video-container {
+  flex: 1;
+  height: 470px;
+  margin: 0 10px; 
+  position: relative;
+  background-color: #141416; 
+  background-image: url('/public/cam_background.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.canvas {
   position: absolute;
-  top: 100px
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
 }
 
-.myapp{
+.data-container {
+  flex: 1;
+  padding: 0 10px; 
+}
+
+.loader {
   display: flex;
-  width: 100vw;
-  height: 100vh;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center; 
+  height: 100%; 
+}
+
+.loader > .ScaleLoader {
+  width: 50px; 
+  height: 50px;
+}
+
+.loader > span {
+  margin-top: 10px; 
+  font-size: 1.2em;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100%;
+  font-size: 1.4rem; 
 }

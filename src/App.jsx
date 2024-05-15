@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./App.css";
 import VideoComponent from "./components/VideoComponent";
-// import CanvasComponent from "./components/CanvasComponent";
+import CanvasComponent from "./components/CanvasComponent";
 import LoaderComponent from "./components/LoaderComponent";
 import DataComponent from "./components/DataComponent";
 import loadModels from "./utils/LoadModels";
@@ -37,25 +37,35 @@ const App = () => {
   }, []);
 
   return (
-    <div className="myapp">
-      <h1>¡Pon tu mejor cara!</h1>
-      <div className="appvideo">
-        <VideoComponent videoRef={videoRef} />
-      </div>
-      {/* <CanvasComponent detections={detections} /> */}
-      {error ? (
-        <div className="error">{error}</div>
-      ) : (
-        <>
-          {loading ? (
-            <LoaderComponent />
+    <main>
+      <h1 className="tittle">¡Pon tu mejor cara!</h1>
+      <div className="myapp">
+        <div className="video-container">
+          <VideoComponent videoRef={videoRef} />
+          <CanvasComponent detections={detections} />
+        </div>
+
+        <div className="data-container">
+          {error ? (
+            <div className="error">{error}</div>
           ) : (
-            <DataComponent expression={expression} age={age} gender={gender} />
+            <>
+              {loading ? (
+                <LoaderComponent />
+              ) : (
+                <DataComponent
+                  expression={expression}
+                  age={age}
+                  gender={gender}
+                />
+              )}
+            </>
           )}
-        </>
-      )}
-    </div>
+        </div>
+      </div>
+    </main>
   );
+  
 };
 
 export default App;

@@ -3,8 +3,8 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 
 const LoaderComponent = () => {
   return (
-    <div>
-      <ScaleLoader />
+    <div className="loader">
+      <ScaleLoader color="white"/>
       <span>CARGANDO</span>
     </div>
   );

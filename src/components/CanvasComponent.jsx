@@ -30,7 +30,7 @@ const CanvasComponent = ({ detections }) => {
   }, [detections]);
 
   return (
-    <canvas ref={canvasRef} width="940" height="650" className="appcanvas" />
+    <canvas ref={canvasRef} width="940" height="650" className="canvas" />
   );
 };
 
