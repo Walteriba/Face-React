@@ -14,10 +14,11 @@
   margin: 0 10px; 
   position: relative;
   background-color: #141416; 
-  background-image: url('/public/cam_background.jpg'); 
+  background-image: url('/cam_background.jpg'); 
   background-size: cover; 
   background-position: center;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .video {
@@ -37,6 +38,11 @@
 .data-container {
   flex: 1;
   padding: 0 10px; 
+}
+
+.data{
+  font-size: 1.6rem;
+  line-height: 2.2rem; 
 }
 
 .loader {
