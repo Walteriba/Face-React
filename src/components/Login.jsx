@@ -55,7 +55,19 @@ export const Login = () => {
 
   return (
     <div>
-      <div className="d-flex justify-content-center align-items-center vw-100 vh-100">
+      <div className="d-flex justify-content-around align-items-center vw-100 vh-100">
+        <div>
+          <h1>FACE REACT</h1>
+          <span>
+            PARA ESTA DEMO, PUEDES INGRESAR CON 
+          </span>
+          <div>
+          EMAIL:  prueba@correo.com
+          </div>
+          <div>
+          CONTRASEÑA:  abc1234
+          </div>
+        </div>
         <div className="p-5 rounded bg-dark-blue">
           <form onSubmit={handleSubmit} className="form-group">
             <h3 className="text-center">INGRESAR</h3>
@@ -66,7 +78,7 @@ export const Login = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="tu e-mail@dominio.com"
+                placeholder="e-mail@dominio.com"
                 onChange={handleChange}
                 className="form-control"
               />
@@ -78,7 +90,7 @@ export const Login = () => {
               <input
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder="*******"
                 id="passwd"
                 onChange={handleChange}
                 className="form-control"
@@ -111,5 +123,5 @@ export const Login = () => {
         </div>
       </div>
     </div>
-  );  
+  );
 };

@@ -6,7 +6,8 @@
 
 .myapp {
   display: flex;
-  position: relative; 
+  position: relative;
+  margin: 2.5em 5em 1em; 
 }
 
 .video-container {

@@ -33,7 +33,7 @@ const faceMyDetect = async (
 
       setDetections(detections);
       setLoading(false);
-    }, 1000);
+    }, 2000);
   } catch (error) {
     console.error(error);
     setError("Error detectando las caras");

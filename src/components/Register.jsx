@@ -55,7 +55,7 @@ export const Register = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="tu e-mail@dominio.com"
+                placeholder="e-mail@dominio.com"
                 onChange={handleChange}
                 className="form-control"
               />
@@ -68,7 +68,7 @@ export const Register = () => {
               <input
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder="*******"
                 id="passwd"
                 onChange={handleChange}
                 className="form-control"

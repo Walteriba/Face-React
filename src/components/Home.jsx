@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useAuth } from "../context/authContext";
 import VideoComponent from "./home/VideoComponent";
-import CanvasComponent from "./home/CanvasComponent";
+// import CanvasComponent from "./home/CanvasComponent";
 import LoaderComponent from "./home/LoaderComponent";
 import DataComponent from "./home/DataComponent";
 import loadModels from "../utils/LoadModels";
@@ -56,7 +56,7 @@ export const Home = () => {
       <div className="myapp">
         <div className="video-container">
           <VideoComponent videoRef={videoRef} />
-          <CanvasComponent detections={detections} />
+          {/* <CanvasComponent detections={detections} /> */}
         </div>
 
         <div className="data-container">
@@ -77,9 +77,12 @@ export const Home = () => {
           )}
         </div>
       </div>
-      <button className="btn btn-primary" onClick={handleLogout}>
-        Logout
-      </button>
+      <div className="d-flex justify-content-end col-md-4">
+        <button className="col-4 btn btn-primary bg-dark-blue" onClick={handleLogout}>
+          Salir
+        </button>
+      </div>
+
     </main>
   );
 };
