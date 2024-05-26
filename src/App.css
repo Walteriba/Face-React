@@ -1,11 +1,13 @@
-.tittle{
+/* HOME */
+.tittle {
   text-align: center;
   font-size: 3rem;
 }
 
 .myapp {
   display: flex;
-  position: relative; 
+  position: relative;
+  margin: 2.5em 5em 1em; 
 }
 
 .video-container {
@@ -40,7 +42,7 @@
   padding: 0 10px; 
 }
 
-.data{
+.data {
   font-size: 1.6rem;
   line-height: 2.2rem; 
 }
@@ -69,4 +71,26 @@
   align-items: center; 
   height: 100%;
   font-size: 1.4rem; 
+}
+
+/* FORM */
+.bg-dark-blue {
+  background-color: #003366; /* Color azul oscuro */
+}
+
+.centered-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+.text {
+  margin: 0 10px;
+  white-space: nowrap;
 }
