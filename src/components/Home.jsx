@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./Home.css";
-import {useAuth} from "../context/authContext"
-import VideoComponent from "./VideoComponent";
-import CanvasComponent from "./CanvasComponent";
-import LoaderComponent from "./LoaderComponent";
-import DataComponent from "./DataComponent";
+import { useAuth } from "../context/authContext";
+import VideoComponent from "./home/VideoComponent";
+import CanvasComponent from "./home/CanvasComponent";
+import LoaderComponent from "./home/LoaderComponent";
+import DataComponent from "./home/DataComponent";
 import loadModels from "../utils/LoadModels";
 import faceMyDetect from "../utils/FaceDetection";
 
@@ -18,16 +17,16 @@ export const Home = () => {
   const videoRef = useRef();
 
   // **************
-  const {user, logout, loading} = useAuth()
+  const { user, logout, loading } = useAuth();
 
   const handleLogout = async () => {
-    await logout()
+    await logout();
     // Navigate("/login")
     // Al hacer el logout estamos borrando el usuario, y entonces
     // lo ideal sería que naveguemos hacia el login. Pero una vez que
     // implementemos la ruta protegida y como ya no hay user (tras el logout)
     // se va a redireccionar a /login automáticamente.
-  }
+  };
 
   // **************
 
@@ -77,11 +76,10 @@ export const Home = () => {
             </>
           )}
         </div>
-        <button className="btn btn-primary" onClick={handleLogout}>
-          Logout
-      </button>
       </div>
+      <button className="btn btn-primary" onClick={handleLogout}>
+        Logout
+      </button>
     </main>
   );
-  
 };

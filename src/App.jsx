@@ -9,7 +9,6 @@ import { ProtectedRoute} from "./components/ProtectedRoute"
 import { AuthProvider } from "./context/authContext"
 
 
-
 function App() {
   const [count, setCount] = useState(0)
 
