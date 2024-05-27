@@ -123,7 +123,7 @@ VITE_FIREBASE_APP_ID=your_app_id
 > ```
 
 
-## Authors and Contributors Graph
+## Autores y Colaboradores
 
 - Walter Ibarrola
 - Alejandro E. Aguilar
