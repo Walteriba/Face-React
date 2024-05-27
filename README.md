@@ -22,9 +22,16 @@
 <code>► Face-React es un proyecto desarrollado como parte de la iniciativa Codo a Codo. Utiliza Face-api.js, React, Bootstrap y Firebase para ofrecer una plataforma de reconocimiento facial y análisis de imágenes.
 </code>
 
+---
 <p align="center">
   <a href="https://youtu.be/k4IZaIDmf6w">VIDEO DEMO</a>
 </p>
+
+<p align="center">
+  <a href="face-react.vercel.app">DEPLOY DEMO</a>
+</p>
+
+---
 
 ##  Características
 
