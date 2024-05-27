@@ -119,11 +119,11 @@ VITE_FIREBASE_APP_ID=your_app_id
 ## Authors and Contributors Graph
 
 - Walter Ibarrola
-- Ezequiel Prueba
+- Alejandro E. Aguilar
 
 <br>
 <p align="center">
-   <a href="https://github.com{/Walteriba/Face-React/}graphs/contributors">
+   <a href="https://github.com/Walteriba/Face-React/graphs/contributors">
       <img src="https://contrib.rocks/image?repo=Walteriba/Face-React">
    </a>
 </p>
