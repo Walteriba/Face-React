@@ -8,7 +8,6 @@
     <em><code>► APP DE DETECCIÓN FACIAL</code></em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/license/Walteriba/Face-React?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/Walteriba/Face-React?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/Walteriba/Face-React?style=default&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/Walteriba/Face-React?style=default&color=0080ff" alt="repo-language-count">
