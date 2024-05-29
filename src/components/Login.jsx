@@ -63,7 +63,7 @@ export const Login = () => {
           <div>EMAIL: prueba@correo.com</div>
           <div>CONTRASEÑA: abc1234</div>
         </div>
-        <div className="p-5 rounded bg-dark-blue">
+        <div className="p-5 rounded bg-dark-blue shadow">
           <form onSubmit={handleSubmit} className="form-group">
             <h3 className="text-center">INGRESAR</h3>
             <div className="mb-3">

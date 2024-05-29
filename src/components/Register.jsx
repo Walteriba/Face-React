@@ -47,7 +47,7 @@ export const Register = () => {
         <div>
           <h1>FACE REACT</h1>
         </div>
-        <div className="p-5 rounded bg-dark-blue">
+        <div className="p-5 rounded bg-dark-blue shadow">
           <form onSubmit={handleSubmit} className="form-group">
             <h3 className="text-center">REGISTRARSE</h3>
 

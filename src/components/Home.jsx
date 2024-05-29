@@ -78,9 +78,9 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className="d-flex justify-content-center ">
+      <div className="d-flex justify-content-center">
         <button
-          className="col-2 btn btn-primary bg-dark-blue"
+          className="col-2 btn btn-primary bg-dark-blue mt-5 shadow"
           onClick={handleLogout}
         >
           Salir
