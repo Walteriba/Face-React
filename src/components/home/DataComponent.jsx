@@ -46,7 +46,7 @@ const DataComponent = ({ expression, age, gender }) => {
       <div className="data text-center">
         <div>¿Sin emoción? ¡Dale un giro a tu expresión y diviértete!</div>
         <br />
-        <img src={`/emojis/${expression}.svg`} alt={`${expression}`} />
+        <img className="emoji-svg" src={`/emojis/${expression}.svg`} alt={`${expression}`} />
         <br />
         <div>{expressionMessage}</div>
         <div>{ageMessage}</div>     

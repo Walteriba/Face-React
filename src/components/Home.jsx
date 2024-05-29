@@ -77,12 +77,15 @@ export const Home = () => {
           )}
         </div>
       </div>
-      <div className="d-flex justify-content-end col-md-4">
-        <button className="col-4 btn btn-primary bg-dark-blue" onClick={handleLogout}>
+
+      <div className="d-flex justify-content-center ">
+        <button
+          className="col-2 btn btn-primary bg-dark-blue"
+          onClick={handleLogout}
+        >
           Salir
         </button>
       </div>
-
     </main>
   );
 };

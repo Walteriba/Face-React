@@ -43,7 +43,10 @@ export const Register = () => {
 
   return (
     <div>
-      <div className="d-flex justify-content-center align-items-center vw-100 vh-100">
+      <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center vw-100 vh-100">
+        <div>
+          <h1>FACE REACT</h1>
+        </div>
         <div className="p-5 rounded bg-dark-blue">
           <form onSubmit={handleSubmit} className="form-group">
             <h3 className="text-center">REGISTRARSE</h3>
@@ -89,7 +92,11 @@ export const Register = () => {
             </div>
             <div className="centered-text my-3">
               <div className="line"></div>
-              <span className="text"><a class="text-decoration-none text-white" href="/login">Volver</a></span>
+              <span className="text">
+                <a class="text-decoration-none text-white" href="/">
+                  Volver
+                </a>
+              </span>
               <div className="line"></div>
             </div>
 

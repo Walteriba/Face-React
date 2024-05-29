@@ -34,11 +34,11 @@ const VideoComponent = ({ videoRef }) => {
   };
 
   return (
-    <div className="video">
+    <div className="video-placeholder" >
       {error ? (
         <div className="error">{error}</div>
       ) : (
-        <video crossOrigin="anonymous" ref={videoRef} autoPlay />
+        <video className="video" crossOrigin="anonymous" ref={videoRef} autoPlay />
       )}
     </div>
   );

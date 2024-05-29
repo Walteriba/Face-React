@@ -55,18 +55,13 @@ export const Login = () => {
 
   return (
     <div>
-      <div className="d-flex justify-content-around align-items-center vw-100 vh-100">
+      <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center vw-100 vh-100">
         <div>
-          <h1>FACE REACT</h1>
-          <span>
-            PARA ESTA DEMO, PUEDES INGRESAR CON 
-          </span>
-          <div>
-          EMAIL:  prueba@correo.com
-          </div>
-          <div>
-          CONTRASEÑA:  abc1234
-          </div>
+          <h1 className="text-center mb-4 ">FACE REACT</h1>
+
+          <span>PARA ESTA DEMO, PUEDES INGRESAR CON</span>
+          <div>EMAIL: prueba@correo.com</div>
+          <div>CONTRASEÑA: abc1234</div>
         </div>
         <div className="p-5 rounded bg-dark-blue">
           <form onSubmit={handleSubmit} className="form-group">
