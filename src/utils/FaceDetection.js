@@ -19,12 +19,14 @@ const faceMyDetect = async (
 
       if (detections.length > 0) {
         const expressions = detections[0].expressions;
-        const maxExpression = Object.keys(expressions).reduce((a, b) =>
-          expressions[a] > expressions[b] ? a : b
-        );
+        const maxExpression = expressions
+          ? Object.keys(expressions).reduce((a, b) =>
+              expressions[a] > expressions[b] ? a : b
+            )
+          : null;
         setExpression(maxExpression);
-        setAge(Math.round(detections[0].age));
-        setGender(detections[0].gender);
+        setAge(detections[0].age ? Math.round(detections[0].age) : null);
+        setGender(detections[0].gender || null);
       } else {
         setExpression(null);
         setAge(null);

@@ -22,35 +22,34 @@ const DataComponent = ({ expression, age, gender }) => {
     case "surprised":
       expressionMessage = "¡Vaya sorpresa!";
       break;
+    case "neutral":
+      expressionMessage = "¡Parece que estás en calma!";
+      break;
     default:
-      expressionMessage = "Pareces estar bastante neutral.";
+      expressionMessage = "No estoy detectando nada.";
   }
 
-  // Setear emocion en neutral
-  const checkAndSetNeutral = (expression) => {
-    return expression === null || expression === undefined
-      ? "neutral"
-      : expression;
-  };
+  // Devolver edad y sexo, aunque sea null
+  const ageMessage = age === null ? null : `¡Pareces tener ${age} años!`;
 
-  expression = checkAndSetNeutral(expression);
+  const genderMessage =
+    gender === null
+      ? null
+      : `¿Tu género es ${gender === "male" ? "masculino" : "femenino"}?`;
 
-  // Pasar a español el sexo
-  let genderInSpanish = gender === "male" ? "Masculino" : "Femenino";
-  //Devolver edad, aunque sea null
-  let ageMessage =
-    age === null ? "No logro detectar una edad" : `¡Pareces tener ${age} años!`;
+  // Manejo de la imagen del emoji
+  const emojiSrc = expression ? `/emojis/${expression}.svg` : `/nofound.png`;
 
   return (
     <div className="container">
       <div className="data text-center">
         <div>¿Sin emoción? ¡Dale un giro a tu expresión y diviértete!</div>
         <br />
-        <img className="emoji-svg" src={`/emojis/${expression}.svg`} alt={`${expression}`} />
+        <img className="emoji-svg" src={emojiSrc} alt={`${expression}`} />
         <br />
         <div>{expressionMessage}</div>
-        <div>{ageMessage}</div>     
-        <div>¿Tu género es {genderInSpanish}?</div>
+        <div>{ageMessage}</div>
+        <div>{genderMessage}</div>
       </div>
     </div>
   );

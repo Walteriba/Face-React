@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useAuth } from "../context/authContext";
 import VideoComponent from "./home/VideoComponent";
+// Este componente  se encarga de renderizar el canva de seguimiento facial
 // import CanvasComponent from "./home/CanvasComponent";
 import LoaderComponent from "./home/LoaderComponent";
 import DataComponent from "./home/DataComponent";
