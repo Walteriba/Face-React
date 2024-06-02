@@ -26,7 +26,7 @@ const DataComponent = ({ expression, age, gender }) => {
       expressionMessage = "¡Parece que estás en calma!";
       break;
     default:
-      expressionMessage = "No estoy detectando nada.";
+      expressionMessage = "No se ha detectado ninguna cara.";
   }
 
   // Devolver edad y sexo, aunque sea null
@@ -43,7 +43,7 @@ const DataComponent = ({ expression, age, gender }) => {
   return (
     <div className="container">
       <div className="data text-center">
-        <div>¿Sin emoción? ¡Dale un giro a tu expresión y diviértete!</div>
+        <div><b>¿Sin emoción? ¡Dale un giro a tu expresión y diviértete!</b></div>
         <br />
         <img className="emoji-svg" src={emojiSrc} alt={`${expression}`} />
         <br />
