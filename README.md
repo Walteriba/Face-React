@@ -52,7 +52,10 @@
     ├── package-lock.json
     ├── package.json
     ├── public
-    │   ├── cam_background.jpg
+    │   ├── background.jpg
+    │   ├── github.svg
+    │   ├── linkedin.svg
+    │   ├── nofound.png
     │   ├── emojis
     │   ├── models
     │   └── vite.svg
