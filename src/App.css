@@ -154,12 +154,12 @@ body::after {
 .icon-small {
   width: 36px; 
   height: 36px; 
-  filter: grayscale(100%);
+  filter: saturate(0%) brightness(200%);
   transition: filter 0.3s ease; 
 }
 
-.hover-gray:hover {
-  filter: grayscale(0%);
+.icon-small:hover {
+  filter: none;
 }
 
 /* FORM */

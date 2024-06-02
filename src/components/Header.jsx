@@ -33,7 +33,7 @@ const Header = () => {
                 <img
                   src="/linkedin.svg"
                   alt="LinkedIn"
-                  className="icon-small hover-gray"
+                  className="icon-small"
                 />
               </a>
             </li>
@@ -43,7 +43,7 @@ const Header = () => {
                 <img
                   src="/github.svg"
                   alt="GitHub"
-                  className="icon-small hover-gray"
+                  className="icon-small"
                 />
               </a>
             </li>
