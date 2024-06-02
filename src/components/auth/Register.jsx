@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../../context/authContext";
 
-export const Login = () => {
+export const Register = () => {
   const [user, setUser] = useState({ email: "", password: "" });
   const [error, setError] = useState();
 
-  const { signIn } = useAuth();
+  const { signUp } = useAuth();
   const navigate = useNavigate();
 
   // La siguiente es una forma muy clara...
@@ -28,8 +28,8 @@ export const Login = () => {
     e.preventDefault();
     setError("");
     try {
-      await signIn(user.email, user.password);
-      navigate("/home");
+      await signUp(user.email, user.password);
+      navigate("/login");
     } catch (error) {
       // console.log(error.message)
       setError(error.message);
@@ -37,35 +37,20 @@ export const Login = () => {
       if (error.code === "auth/invalid-email") {
         setError("Correo inválido.");
       }
-      if (error.code === "auth/invalid-credential") {
-        setError("Su información de autenticación es incorrecta.");
-      }
-      if (error.code === "auth/too-many-requests") {
-        setError(
-          "Demasiados intentos incorrectos. Espere e intente nuevamente."
-        );
-      }
     }
-    // console.log(user)
-  };
-
-  const handleRegister = (e) => {
-    navigate("/Register");
+    //console.log(user)
   };
 
   return (
     <div>
       <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center vw-100 vh-100">
         <div>
-          <h1 className="text-center mb-4 ">FACE REACT</h1>
-
-          <span>PARA ESTA DEMO, PUEDES INGRESAR CON</span>
-          <div>EMAIL: prueba@correo.com</div>
-          <div>CONTRASEÑA: abc1234</div>
+          <h1>FACE REACT</h1>
         </div>
         <div className="p-5 rounded bg-dark-blue shadow">
           <form onSubmit={handleSubmit} className="form-group">
-            <h3 className="text-center">INGRESAR</h3>
+            <h3 className="text-center">REGISTRARSE</h3>
+
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 E-mail
@@ -78,6 +63,7 @@ export const Login = () => {
                 className="form-control"
               />
             </div>
+
             <div className="mb-3">
               <label htmlFor="password" className="form-label">
                 Contraseña
@@ -91,30 +77,31 @@ export const Login = () => {
                 className="form-control"
               />
             </div>
+
             <div className="d-grid">
-              <button className="btn btn-primary" name="login">
-                Ingresar
+              <button
+                type="onSubmit"
+                className="btn btn-primary"
+                name="register"
+              >
+                Registrarse
               </button>
+              {/* // Si hay error (en la interacción con 
+                // la API de Firebase en handleSubmit())
+                // => lo muestro. */}
             </div>
-            <div>
-              {error && <p className="text-center">{error}</p>}
-              {!error && <p> </p>}
-            </div>
-          </form>
-          <div className="d-grid">
             <div className="centered-text my-3">
               <div className="line"></div>
-              <span className="text">¿No tienes una cuenta?</span>
+              <span className="text">
+                <a class="text-decoration-none text-white" href="/">
+                  Volver
+                </a>
+              </span>
               <div className="line"></div>
             </div>
-            <button
-              onClick={handleRegister}
-              className="d-grid btn btn-primary mt-4"
-              name="register"
-            >
-              Registrarse
-            </button>
-          </div>
+
+            <div>{error && <p>{error}</p>}</div>
+          </form>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import {useAuth} from "../context/authContext"
+import {useAuth} from "../../context/authContext"
 import {Navigate} from "react-router-dom" 
 // Importo "Navigate", no "useNavigate". Es un componente.
 
