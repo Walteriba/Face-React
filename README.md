@@ -22,9 +22,9 @@
 </code>
 
 ---
-<div style="text-align: center;">
+<p align="center">
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWgyOWx2M2xwcGc4ZWxidXExejdpc2RuaWF5cmF3ZmhhZDBuenN4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kEW9PJGXp9uJmw5wRA/giphy.gif" alt="GIF">
-</div>
+</p>
 
 <p align="center">
   <a href="https://face-react.vercel.app/">DEPLOY DEMO</a>
