@@ -13,7 +13,7 @@
 	<img src="https://img.shields.io/github/languages/count/Walteriba/Face-React?style=default&color=0080ff" alt="repo-language-count">
 <p>
 <p align="center">
-	<!-- default option, no dependency badges. -->
+	
 </p>
 
 ##  Descripción General
@@ -22,9 +22,9 @@
 </code>
 
 ---
-<p align="center">
-  <a href="https://youtu.be/k4IZaIDmf6w">VIDEO DEMO</a>
-</p>
+<div style="text-align: center;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWgyOWx2M2xwcGc4ZWxidXExejdpc2RuaWF5cmF3ZmhhZDBuenN4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kEW9PJGXp9uJmw5wRA/giphy.gif" alt="GIF">
+</div>
 
 <p align="center">
   <a href="https://face-react.vercel.app/">DEPLOY DEMO</a>
