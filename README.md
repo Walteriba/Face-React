@@ -13,7 +13,7 @@
 	<img src="https://img.shields.io/github/languages/count/Walteriba/Face-React?style=default&color=0080ff" alt="repo-language-count">
 <p>
 <p align="center">
-	<!-- default option, no dependency badges. -->
+	
 </p>
 
 ## Descripción General
@@ -24,7 +24,7 @@
 ---
 
 <p align="center">
-  <a href="https://youtu.be/k4IZaIDmf6w">VIDEO DEMO</a>
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWxyOWk3bjAxNTk1MmRhNnB6Y2JoZTNxZjhudnY1aHRhdXk1cWxyOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kuQrK3m1pX5kvB1Mu1/giphy.gif" alt="GIF">
 </p>
 
 <p align="center">
