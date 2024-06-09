@@ -29,9 +29,7 @@ const CanvasComponent = ({ detections }) => {
     return () => {};
   }, [detections]);
 
-  return (
-    <canvas ref={canvasRef} width="940" height="650" className="canvas" />
-  );
+  return <canvas ref={canvasRef} width="940" height="650" className="canvas" />;
 };
 
 export default CanvasComponent;

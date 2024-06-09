@@ -16,12 +16,13 @@
 	<!-- default option, no dependency badges. -->
 </p>
 
-##  Descripción General
+## Descripción General
 
 <code>► Face-React es un proyecto desarrollado como parte de la iniciativa Codo a Codo. Utiliza Face-api.js, React, Bootstrap y Firebase para ofrecer una plataforma de reconocimiento facial y análisis de imágenes.
 </code>
 
 ---
+
 <p align="center">
   <a href="https://youtu.be/k4IZaIDmf6w">VIDEO DEMO</a>
 </p>
@@ -32,19 +33,16 @@
 
 ---
 
-##  Características
+## Características
 
-   
 - Detección y reconocimiento facial en tiempo real
 - Detección de emociones
 - Estimación de edad y género
 - Autenticación y gestión de usuarios con Firebase
 - Diseño adaptable utilizando Bootstrap
 
+## Estructura del Repositorio
 
-
-
-##  Estructura del Repositorio
 ```sh
 └── Face-React/
     ├── README.md
@@ -76,16 +74,19 @@
 #### Desde `source`:
 
 > 1. Clona el repositorio de Face-React:
+>
 > ```console
 > $ git clone https://github.com/Walteriba/Face-React
 > ```
 >
 > 2. Cambia al directorio del proyecto:
+>
 > ```console
 > $ cd Face-React
 > ```
 >
 > 3. Instala las dependencias:
+>
 > ```console
 > $ npm install
 > ```
@@ -99,6 +100,7 @@
 > 3. Crea un archivo .env en el directorio raíz de tu proyecto y agrega las siguientes variables, reemplazando los valores de marcador de posición con tu configuración real de Firebase:
 
 El archivo `.env` debería verse algo así:
+
 ```env
 VITE_FIREBASE_API_KEY=your_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
@@ -109,13 +111,13 @@ VITE_FIREBASE_APP_ID=your_app_id
 
 ```
 
-###  Uso
+### Uso
 
 > Ejecuta Face-React utilizando el siguiente comando:
+>
 > ```console
 > $ npm run dev
 > ```
-
 
 ## Autores y Colaboradores
 

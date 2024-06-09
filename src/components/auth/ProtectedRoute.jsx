@@ -1,12 +1,10 @@
-import {useAuth} from "../../context/authContext"
-import {Navigate} from "react-router-dom" 
+import { useAuth } from "../../context/authContext";
+import { Navigate } from "react-router-dom";
 // Importo "Navigate", no "useNavigate". Es un componente.
 
-export const ProtectedRoute = ({children}) => {
-    const {user, loading} = useAuth()
-    if (loading) return <h1>CARGANDO</h1>
-    if(!user) return <Navigate to='/login'/>
-  return (
-    <>{children}</>
-  )
-}
+export const ProtectedRoute = ({ children }) => {
+  const { user, loading } = useAuth();
+  if (loading) return <h1>CARGANDO</h1>;
+  if (!user) return <Navigate to="/login" />;
+  return <>{children}</>;
+};

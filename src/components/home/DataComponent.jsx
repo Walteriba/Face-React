@@ -35,7 +35,7 @@ const DataComponent = ({ expression, age, gender }) => {
   const genderMessage =
     gender === null
       ? null
-      : `¿Tu género es ${gender === "male" ? "masculino" : "femenino"}?`;
+      : `¿Tu sexo es ${gender === "male" ? "masculino" : "femenino"}?`;
 
   // Manejo de la imagen del emoji
   const emojiSrc = expression ? `/emojis/${expression}.svg` : `/nofound.png`;

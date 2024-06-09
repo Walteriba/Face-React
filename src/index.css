@@ -16,10 +16,14 @@ body {
   font-family: Roboto, Arial, sans-serif;
   min-width: 320px;
   min-height: 100vh;
-  
+
   color: rgba(255, 255, 255, 0.87);
-  background: rgb(5,4,41);
-  background: linear-gradient(45deg, rgba(5,4,41,1) 0%, rgba(24,24,36,1) 60%); 
+  background: rgb(5, 4, 41);
+  background: linear-gradient(
+    45deg,
+    rgba(5, 4, 41, 1) 0%,
+    rgba(24, 24, 36, 1) 60%
+  );
 }
 
 @media (prefers-color-scheme: dark) {

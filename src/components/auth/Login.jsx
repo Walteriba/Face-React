@@ -64,7 +64,7 @@ export const Login = () => {
           <div>CONTRASEÑA: abc1234</div>
         </div>
         <div className="p-5 rounded bg-dark-blue shadow">
-          <form onSubmit={handleSubmit} className="form-group">
+          <form onSubmit={ handleSubmit } className="form-group">
             <h3 className="text-center">INGRESAR</h3>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
@@ -74,7 +74,7 @@ export const Login = () => {
                 type="email"
                 name="email"
                 placeholder="e-mail@dominio.com"
-                onChange={handleChange}
+                onChange={ handleChange }
                 className="form-control"
               />
             </div>
@@ -87,7 +87,7 @@ export const Login = () => {
                 name="password"
                 placeholder="*******"
                 id="passwd"
-                onChange={handleChange}
+                onChange={ handleChange }
                 className="form-control"
               />
             </div>
@@ -108,7 +108,7 @@ export const Login = () => {
               <div className="line"></div>
             </div>
             <button
-              onClick={handleRegister}
+              onClick={ handleRegister }
               className="d-grid btn btn-primary mt-4"
               name="register"
             >

@@ -48,7 +48,7 @@ export const Register = () => {
           <h1>FACE REACT</h1>
         </div>
         <div className="p-5 rounded bg-dark-blue shadow">
-          <form onSubmit={handleSubmit} className="form-group">
+          <form onSubmit={ handleSubmit } className="form-group">
             <h3 className="text-center">REGISTRARSE</h3>
 
             <div className="mb-3">
@@ -59,7 +59,7 @@ export const Register = () => {
                 type="email"
                 name="email"
                 placeholder="e-mail@dominio.com"
-                onChange={handleChange}
+                onChange={ handleChange }
                 className="form-control"
               />
             </div>
@@ -73,7 +73,7 @@ export const Register = () => {
                 name="password"
                 placeholder="*******"
                 id="passwd"
-                onChange={handleChange}
+                onChange={ handleChange }
                 className="form-control"
               />
             </div>

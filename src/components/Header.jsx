@@ -28,7 +28,10 @@ const Header = () => {
         <nav>
           <ul className="list-inline d-flex align-items-center">
             <li className="list-inline-item">
-              <a href="https://www.linkedin.com/in/walter-ibarrola" target="blank">
+              <a
+                href="https://www.linkedin.com/in/walter-ibarrola"
+                target="blank"
+              >
                 {" "}
                 <img
                   src="/linkedin.svg"
@@ -40,11 +43,7 @@ const Header = () => {
             <li className="list-inline-item">
               <a href="https://github.com/Walteriba/Face-React" target="blank">
                 {" "}
-                <img
-                  src="/github.svg"
-                  alt="GitHub"
-                  className="icon-small"
-                />
+                <img src="/github.svg" alt="GitHub" className="icon-small" />
               </a>
             </li>
             {user && (
@@ -52,7 +51,7 @@ const Header = () => {
                 <a
                   href="#"
                   className="logout-link d-flex align-items-center"
-                  onClick={handleLogout}
+                  onClick={ handleLogout }
                 >
                   <b>SALIR</b>
                 </a>

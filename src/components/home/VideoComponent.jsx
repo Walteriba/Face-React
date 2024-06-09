@@ -29,20 +29,24 @@ const VideoComponent = ({ videoRef }) => {
   const stopVideo = () => {
     if (streamRef.current) {
       const tracks = streamRef.current.getTracks();
-      tracks.forEach(track => track.stop());
+      tracks.forEach((track) => track.stop());
     }
   };
 
   return (
-    <div className="video-placeholder" >
+    <div className="video-placeholder">
       {error ? (
         <div className="error">{error}</div>
       ) : (
-        <video className="video" crossOrigin="anonymous" ref={videoRef} autoPlay />
+        <video
+          className="video"
+          crossOrigin="anonymous"
+          ref={videoRef}
+          autoPlay
+        />
       )}
     </div>
   );
 };
 
 export default VideoComponent;
-
