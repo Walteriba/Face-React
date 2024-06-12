@@ -43,9 +43,22 @@ export const Register = () => {
 
   return (
     <div>
-      <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center vw-100 vh-100">
-        <div>
-          <h1>FACE REACT</h1>
+      <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center vw-100 vh-100">
+        <div >
+          <h1 className="text-center my-0 fs-1">FACE REACT</h1>
+
+          <img
+            className="emoji-svg d-block mx-auto"
+            src="/happy-girl.svg"
+            alt="Happy Girl"
+          />
+
+          <p className="mx-5 fs-5 text-center">
+            ¡Deja que tu cara hable! Experimenta con tus expresiones faciales y
+            diviértete como nunca antes.
+          </p>
+
+
         </div>
         <div className="p-5 rounded bg-dark-blue shadow">
           <form onSubmit={ handleSubmit } className="form-group">
@@ -93,7 +106,7 @@ export const Register = () => {
             <div className="centered-text my-3">
               <div className="line"></div>
               <span className="text">
-                <a class="text-decoration-none text-white" href="/">
+                <a class="text-decoration-none text-white" href="/login">
                   Volver
                 </a>
               </span>

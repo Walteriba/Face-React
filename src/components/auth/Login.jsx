@@ -50,21 +50,30 @@ export const Login = () => {
   };
 
   const handleRegister = (e) => {
-    navigate("/Register");
+    navigate("/register");
   };
 
   return (
     <div>
-      <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center vw-100 vh-100">
+      <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center vw-100 vh-100">
         <div>
-          <h1 className="text-center mb-4 ">FACE REACT</h1>
+          <h1 className="text-center my-0 fs-1">FACE REACT</h1>
 
-          <span>PARA ESTA DEMO, PUEDES INGRESAR CON</span>
-          <div>EMAIL: prueba@correo.com</div>
-          <div>CONTRASEÑA: abc1234</div>
+          <img
+            className="emoji-svg d-block mx-auto"
+            src="/happy-girl.svg"
+            alt="Happy Girl"
+          />
+
+          <p className="mx-5 fs-5 text-center">
+            ¡Deja que tu cara hable! Experimenta con tus expresiones y
+            diviértete como nunca antes.
+          </p>
+
+
         </div>
-        <div className="p-5 rounded bg-dark-blue shadow">
-          <form onSubmit={ handleSubmit } className="form-group">
+        <div className="p-5 rounded bg-dark-blue shadow ">
+          <form onSubmit={handleSubmit} className="form-group">
             <h3 className="text-center">INGRESAR</h3>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
@@ -74,7 +83,7 @@ export const Login = () => {
                 type="email"
                 name="email"
                 placeholder="e-mail@dominio.com"
-                onChange={ handleChange }
+                onChange={handleChange}
                 className="form-control"
               />
             </div>
@@ -87,7 +96,7 @@ export const Login = () => {
                 name="password"
                 placeholder="*******"
                 id="passwd"
-                onChange={ handleChange }
+                onChange={handleChange}
                 className="form-control"
               />
             </div>
@@ -108,7 +117,7 @@ export const Login = () => {
               <div className="line"></div>
             </div>
             <button
-              onClick={ handleRegister }
+              onClick={handleRegister}
               className="d-grid btn btn-primary mt-4"
               name="register"
             >
