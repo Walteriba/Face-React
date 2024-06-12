@@ -77,8 +77,7 @@ export const Login = () => {
         />
         <div className="mx-2 fs-5 text-center">¡Deja que tu cara hable!</div>
         <p className="mx-2 fs-5 text-center tittle-text">
-          Experimenta con tus expresiones faciales y diviértete como nunca
-          antes.
+          Experimenta con tus expresiones y diviértete como nunca antes.
         </p>
       </div>
 
