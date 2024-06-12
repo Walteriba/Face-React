@@ -298,10 +298,6 @@ body::after {
     max-height: 35vh;
   }
 
-  .emoji-svg {
-    max-height: 20vh;
-  }
-
   .data {
     font-size: 1rem;
     line-height: 1.2rem;
