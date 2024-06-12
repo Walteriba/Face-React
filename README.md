@@ -50,13 +50,8 @@
     ├── package-lock.json
     ├── package.json
     ├── public
-    │   ├── background.jpg
-    │   ├── github.svg
-    │   ├── linkedin.svg
-    │   ├── nofound.png
     │   ├── emojis
-    │   ├── models
-    │   └── vite.svg
+    │   └── models
     ├── src
     │   ├── App.css
     │   ├── App.jsx
