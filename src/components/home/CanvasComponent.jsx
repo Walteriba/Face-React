@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import * as faceapi from "face-api.js";
 
+// COMPONENTE ACTUALMENTE EN DESUSO, SIRVE PARA VER LAS LANDMARKS FACIALES
 const CanvasComponent = ({ detections }) => {
   const canvasRef = useRef();
 

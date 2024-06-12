@@ -1,32 +1,36 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../context/authContext"; 
 import Header from "./Header";
-import VideoComponent from "./home/VideoComponent";
-import LoaderComponent from "./home/LoaderComponent";
-import DataComponent from "./home/DataComponent";
-import loadModels from "../utils/LoadModels";
-import faceMyDetect from "../utils/FaceDetection";
+import VideoComponent from "./home/VideoComponent"; 
+import LoaderComponent from "./home/LoaderComponent"; 
+import DataComponent from "./home/DataComponent"; 
+import loadModels from "../utils/LoadModels"; 
+import faceMyDetect from "../utils/FaceDetection"; 
 
 export const Home = () => {
-  const [detections, setDetections] = useState(null);
-  const [expression, setExpression] = useState(null);
-  const [age, setAge] = useState(null);
-  const [gender, setGender] = useState(null);
+  // Estado para almacenar los datos de la cara detectada
+  const [faceData, setFaceData] = useState({
+    detections: null,
+    expression: null,
+    age: null,
+    gender: null
+  });
   const [error, setError] = useState(null);
+  // Estado para indicar si se están cargando los modelos
   const [gettingReady, setGettingReady] = useState(true);
   const videoRef = useRef();
   const { user } = useAuth();
 
+  // Efecto para inicializar los modelos y la detección facial
   useEffect(() => {
     const initializeModels = async () => {
       try {
+        // Carga los modelos necesarios
         await loadModels();
+        // Inicia la detección facial
         await faceMyDetect(
           videoRef,
-          setDetections,
-          setExpression,
-          setAge,
-          setGender,
+          setFaceData,
           setGettingReady,
           setError
         );
@@ -36,9 +40,11 @@ export const Home = () => {
         setGettingReady(false);
       }
     };
+    // Llama a la función de inicialización cuando se monta el componente
     initializeModels();
   }, []);
 
+  // Función para renderizar el contenido basado en el estado de error y carga
   const renderContent = () => {
     if (error) {
       return <div className="error">{error}</div>;
@@ -46,7 +52,11 @@ export const Home = () => {
       return gettingReady ? (
         <LoaderComponent />
       ) : (
-        <DataComponent expression={expression} age={age} gender={gender} />
+        <DataComponent 
+          expression={faceData.expression} 
+          age={faceData.age} 
+          gender={faceData.gender} 
+        />
       );
     }
   };
@@ -60,7 +70,9 @@ export const Home = () => {
           <div className="video-container">
             <VideoComponent videoRef={videoRef} />
           </div>
-          <div className="data-container">{renderContent()}</div>
+          <div className="data-container">
+            {renderContent()}
+          </div>
         </div>
       </main>
     </div>
