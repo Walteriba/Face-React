@@ -43,8 +43,8 @@ export const Register = () => {
 
   return (
     <div>
-      <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center vw-100 vh-100">
-        <div >
+      <div className="d-flex flex-column flex-lg-row justify-content-evenly align-items-center vw-100 min-vh-100">
+        <div>
           <h1 className="text-center my-0 fs-1">FACE REACT</h1>
 
           <img
@@ -53,15 +53,16 @@ export const Register = () => {
             alt="Happy Girl"
           />
 
-          <p className="mx-5 fs-5 text-center">
-            ¡Deja que tu cara hable! Experimenta con tus expresiones faciales y
-            diviértete como nunca antes.
+          <div className="mx-5 fs-5 text-center">¡Deja que tu cara hable!</div>
+
+          <p className="mx-5 fs-5 text-center tittle-text">
+            Experimenta con tus expresiones faciales y diviértete como nunca
+            antes.
           </p>
-
-
         </div>
+
         <div className="p-5 rounded bg-dark-blue shadow">
-          <form onSubmit={ handleSubmit } className="form-group">
+          <form onSubmit={handleSubmit} className="form-group">
             <h3 className="text-center">REGISTRARSE</h3>
 
             <div className="mb-3">
@@ -72,7 +73,7 @@ export const Register = () => {
                 type="email"
                 name="email"
                 placeholder="e-mail@dominio.com"
-                onChange={ handleChange }
+                onChange={handleChange}
                 className="form-control"
               />
             </div>
@@ -86,7 +87,7 @@ export const Register = () => {
                 name="password"
                 placeholder="*******"
                 id="passwd"
-                onChange={ handleChange }
+                onChange={handleChange}
                 className="form-control"
               />
             </div>
