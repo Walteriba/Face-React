@@ -6,9 +6,9 @@ body::after {
   width: 100%;
   height: 100%;
   background-image: url(/background.svg);
-  background-size: 20%;
+  background-size: 25%;
   background-repeat: repeat;
-  filter: brightness(0.2) contrast(0.8);
+  filter: brightness(0.2) contrast(0.85);
   z-index: -1;
   min-height: 100vh;
 }
@@ -25,7 +25,7 @@ body::after {
   flex-wrap: wrap;
   display: flex;
   position: relative;
-  margin: 2em 3em 1em;
+  margin: 2em 8em 1em;
 }
 
 .video-container,
@@ -87,6 +87,7 @@ body::after {
   justify-content: center;
   align-items: center;
   height: 100%;
+  min-height: 40vh;
 }
 
 .loader>.ScaleLoader {
@@ -136,37 +137,40 @@ body::after {
 
 .header nav ul li {
   margin-left: 20px;
-  font-size: large;
+  font-size: x-large;
 }
 
 .header nav ul li a {
   color: #fff;
   text-decoration: none;
-  transition: background-image 0.3s ease, color 0.3s ease;
+  transition: background-image 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .header nav ul li a:hover {
-  background-image: linear-gradient(45deg, #6dc7ff 10%, #d677ff 40%, #4187ff 99%, #c20aff 100%);
+  background-image: linear-gradient(45deg, #6dc7ff 10%, #ca4dff 40%, #4187ff 99%, #c20aff 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;  
+  color: transparent;
+  transform: scale(1.1);
 }
 
 .icon-small {
   width: 36px;
   height: 36px;
   filter: saturate(0%) brightness(200%);
-  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .icon-small:hover {
   filter: none;
+  transform: scale(1.1);
 }
+
 
 /* FORM */
 .bg-dark-blue {
   background-color: #003366;
-  background: linear-gradient(45deg, rgb(17, 13, 126) 0%, rgb(28, 28, 51) 60%);
+  background: linear-gradient(45deg, rgb(34, 31, 114) 0%, rgb(28, 28, 51) 60%);
 }
 
 .centered-text {
@@ -184,6 +188,71 @@ body::after {
 .text {
   margin: 0 10px;
   white-space: nowrap;
+}
+
+.tittle-text {
+  max-width: 50vh;
+}
+
+.button-demo {
+  position: relative;
+  z-index: 0;
+}
+
+.button-demo:before {
+  content: "hello";
+  background: linear-gradient(
+    45deg,
+    #002bff,
+    #ff00c8,
+    #7a00ff,
+    #00ffd5,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #002bff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  transition: opactiy 0.3s ease-in-out;
+}
+
+.button-demo:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0d6efd;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.button-demo:hover:after {
+  background: #183eff;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* RESPONSIVE */
@@ -209,7 +278,9 @@ body::after {
 
   .myapp {
     flex-direction: column;
+    margin: 2em 2.5em 1em;
   }
+
 
   .video-container,
   .data-container {
